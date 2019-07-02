@@ -18,8 +18,5 @@ In the project directory:
 Install dependences:  
 `yarn install`
 
-Test the code:  
-`yarn test`
-
 Run project:  
 `yarn start`
