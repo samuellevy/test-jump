@@ -9,7 +9,6 @@ const INITIAL_STATE = {
 function sessions(state = INITIAL_STATE, action) {
   switch (action.type) {
     case "GET_DATA":
-      console.log(action);
       return {
         ...state,
         data: {

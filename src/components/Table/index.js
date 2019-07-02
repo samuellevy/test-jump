@@ -15,6 +15,23 @@ class Table extends Component {
     console.log(`Encerrar sessão ${session_id}`);
   }
 
+  formatDate(date) {
+    const dateObj = new Date(date);
+    const day = dateObj.getDate();
+    const month = dateObj.getMonth();
+    const year = dateObj.getFullYear();
+    const hour = dateObj.getHours();
+    const minute = dateObj.getMinutes();
+
+    date = `${this.formatDigits(day)}/${this.formatDigits(month)}/${year} (${this.formatDigits(hour)}h${this.formatDigits(minute)})`;
+    return date;
+  }
+
+  formatDigits(n) {
+    if (n === 0) return "00";
+    else return n > 9 ? "" + n : "0" + n;
+  }
+
   render() {
     const { data, loading } = this.props;
     return (
@@ -38,12 +55,12 @@ class Table extends Component {
                   <Text>{data.username}</Text>
                 </Value>
                 <Value>
-                  <Text>{item.startDateTime}</Text>
+                  <Text>{this.formatDate(item.startDateTime)}</Text>
                   {/* <Button>Encerrar sessão</Button> */}
                 </Value>
                 <Value>
                   {new Date(item.endDateTime) > new Date(item.startDateTime) ? (
-                    <Text>{item.endDateTime}</Text>
+                    <Text>{this.formatDate(item.endDateTime)}</Text>
                   ) : (
                     <>
                       <Status>Usuário Ativo</Status>
