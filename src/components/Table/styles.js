@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { colors } from "../../globals/styles";
 
@@ -70,3 +71,11 @@ export const Status = styled.span`
   text-align: center;
   padding: 7px 14px;
 `;
+
+export const LoadingBox = ({ children }) => (
+  <tr>
+    <td colspan={3} style={{ textAlign: `center` }}>
+      {children}
+    </td>
+  </tr>
+);
