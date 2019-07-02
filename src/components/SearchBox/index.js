@@ -10,7 +10,6 @@ export default class SearchBox extends Component {
       <Container>
         <InputGroup>
           <Input placeholder={"Pesquisar"} />
-          <Icon image="search" color={colors.darkblue} size={15} />
         </InputGroup>
 
         <Button>

@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { colors } from "../../globals/styles";
 
 export const Container = styled.div`
-  // height: 100%;
-  height: 300px;
   display: flex;
   margin-top: 57px;
   // align-items: center;

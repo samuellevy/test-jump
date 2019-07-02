@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { colors } from "../../globals/styles";
 
+import search from "../../assets/images/magnifiyng-glass.png";
+
 export const Container = styled.div`
   width: 245px;
   border: 2px solid ${colors.darkblue};
@@ -23,9 +25,11 @@ export const Input = styled.input`
   text-align: center;
   border: none;
   width: 100%;
-  // padding: 10px 0;
   ::placeholder {
     font-style: oblique;
+    background-image: url(${search});
+    background-position: 80% 20%;
+    background-repeat: no-repeat;
   }
 `;
 
