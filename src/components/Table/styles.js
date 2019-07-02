@@ -61,6 +61,7 @@ export const Button = styled.button`
   font-size: 15px;
   font-weight: 900;
   letter-spacing: -1px;
+  cursor: pointer;
 `;
 export const Status = styled.span`
   border: 1px solid ${colors.blue};

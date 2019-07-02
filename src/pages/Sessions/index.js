@@ -33,6 +33,10 @@ class Sessions extends Component {
     };
   }
 
+  handleExportBtn() {
+    console.log("Botão exportar clicado");
+  }
+
   render() {
     const { data } = this.props;
     console.log(data);
@@ -40,10 +44,15 @@ class Sessions extends Component {
       <Container>
         <Section>
           <Header>
-            <Button caption="Exportar" icon="arrow_down" />
+            <Button
+              caption="Exportar"
+              icon="arrow_down"
+              onClick={() => {
+                this.handleExportBtn();
+              }}
+            />
             <SearchBox />
           </Header>
-
           <Table />
         </Section>
       </Container>

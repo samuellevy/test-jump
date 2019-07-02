@@ -9,6 +9,10 @@ class Table extends Component {
     items: [{}, {}, {}, {}, {}, {}]
   };
 
+  handleCloseSession(session_id) {
+    console.log(`Encerrar sessão ${session_id}`);
+  }
+
   render() {
     const { data } = this.props;
     return (
@@ -36,7 +40,13 @@ class Table extends Component {
                 ) : (
                   <>
                     <Status>Usuário Ativo</Status>
-                    <Button>Encerrar sessão</Button>
+                    <Button
+                      onClick={() => {
+                        this.handleCloseSession(item.sessionId);
+                      }}
+                    >
+                      Encerrar sessão
+                    </Button>
                   </>
                 )}
               </Value>
