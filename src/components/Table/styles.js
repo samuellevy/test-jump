@@ -73,9 +73,11 @@ export const Status = styled.span`
 `;
 
 export const LoadingBox = ({ children }) => (
-  <tr>
-    <td colspan={3} style={{ textAlign: `center` }}>
-      {children}
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <td colSpan={3} style={{ textAlign: `center` }}>
+        {children}
+      </td>
+    </tr>
+  </tbody>
 );

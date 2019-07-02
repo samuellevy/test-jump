@@ -4,8 +4,9 @@ import { colors } from "../../globals/styles";
 export const Container = styled.div`
   display: flex;
   margin-top: 57px;
-  // align-items: center;
-  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 `;
 
 export const Section = styled.div`
@@ -22,3 +23,10 @@ export const Header = styled.div`
 `;
 
 export const InputBox = styled.div``;
+
+export const Footer = styled.footer`
+  padding: 20px 20px;
+  font-size: 18px;
+  color: ${colors.darkgray};
+  text-align: center;
+`;

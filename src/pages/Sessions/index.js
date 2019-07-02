@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Container, Section, Header } from "./styles";
+import { Container, Section, Header, Footer } from "./styles";
 import Button from "../../components/Button";
 import SearchBox from "../../components/SearchBox";
 import Table from "../../components/Table";
@@ -55,6 +55,7 @@ class Sessions extends Component {
           </Header>
           <Table />
         </Section>
+        <Footer>Todos os direitos reservados a Jump Tecnologia | 2019 ©</Footer>
       </Container>
     );
   }
