@@ -2,30 +2,43 @@ import React, { Component } from "react";
 
 import { Container, Header, Field, Body, Item, Value, Text, Button, Status } from "./styles";
 
-export default class Table extends Component {
+import { connect } from "react-redux";
+
+class Table extends Component {
   state = {
     items: [{}, {}, {}, {}, {}, {}]
   };
+
   render() {
+    const { data } = this.props;
     return (
       <Container>
         <Header>
-          <Field>Operador</Field>
-          <Field>Abertura de sessão</Field>
-          <Field>Fechamento de sessão</Field>
+          <tr>
+            <Field>Operador</Field>
+            <Field>Abertura de sessão</Field>
+            <Field>Fechamento de sessão</Field>
+          </tr>
         </Header>
         <Body>
-          {this.state.items.map(() => (
-            <Item>
+          {data.sessions.map((item, key) => (
+            <Item key={key}>
               <Value>
-                <Text>José Augusto da Silva Soares Brandão</Text>
+                <Text>{data.username}</Text>
               </Value>
               <Value>
-                {/* <Text>16/04/2019 (10h54)</Text> */}
-                <Button>Encerrar sessão</Button>
+                <Text>{item.startDateTime}</Text>
+                {/* <Button>Encerrar sessão</Button> */}
               </Value>
               <Value>
-                <Status>Usuário Ativo</Status>
+                {new Date(item.endDateTime) > new Date(item.startDateTime) ? (
+                  <Text>{item.endDateTime}</Text>
+                ) : (
+                  <>
+                    <Status>Usuário Ativo</Status>
+                    <Button>Encerrar sessão</Button>
+                  </>
+                )}
               </Value>
             </Item>
           ))}
@@ -34,3 +47,7 @@ export default class Table extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  data: state.sessions.data
+}))(Table);

@@ -32,6 +32,13 @@ export const Item = styled.tr`
   :hover {
     background-color: ${colors.beige};
     border-bottom: 2px solid ${colors.gray};
+
+    span {
+      display: none;
+    }
+    button {
+      display: block;
+    }
   }
 `;
 export const Value = styled.td`
@@ -48,8 +55,7 @@ export const Text = styled.div`
   padding-left: 15px;
 `;
 export const Button = styled.button`
-  display: block;
-  margin: 0 auto;
+  display: none;
   border: none;
   background-color: transparent;
   font-size: 15px;
