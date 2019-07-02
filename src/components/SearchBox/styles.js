@@ -8,13 +8,22 @@ export const Container = styled.div`
   flex-wrap: no-wrap;
   border-radius: 5px;
   justify-content: space-between;
-  background-color: tomato;
+  // background-color: tomato;
+`;
+
+export const InputGroup = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
 `;
 
 export const Input = styled.input`
   text-align: center;
   border: none;
   width: 100%;
+  // padding: 10px 0;
   ::placeholder {
     font-style: oblique;
   }

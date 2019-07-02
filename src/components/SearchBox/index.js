@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Container, Input, Button } from "./styles";
+import { Container, InputGroup, Input, Button } from "./styles";
 import { colors } from "../../globals/styles";
 import Icon from "../Icon";
 
@@ -8,7 +8,10 @@ export default class SearchBox extends Component {
   render() {
     return (
       <Container>
-        <Input placeholder={"Pesquisar"} />
+        <InputGroup>
+          <Input placeholder={"Pesquisar"} />
+          <Icon image="search" color={colors.darkblue} size={15} />
+        </InputGroup>
 
         <Button>
           <Icon image="arrow_down" color={colors.white} size={8} />
