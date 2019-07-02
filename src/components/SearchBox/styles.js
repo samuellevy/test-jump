@@ -37,4 +37,5 @@ export const Button = styled.button`
   border: 0;
   background-color: ${colors.darkblue};
   padding: 0 15px;
+  cursor: pointer;
 `;

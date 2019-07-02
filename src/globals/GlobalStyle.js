@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html{
     height: 100%;
-    background-color: ${colors.bluegray};
+    background-color: ${colors.softblue};
     font-family: 'Lato', sans-serif;
     body{
       height: 100%;

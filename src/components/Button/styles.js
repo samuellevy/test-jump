@@ -12,4 +12,5 @@ export const Container = styled.button`
   justify-content: space-between;
   align-items: center;
   width: 108px;
+  cursor: pointer;
 `;
