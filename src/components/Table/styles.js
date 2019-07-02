@@ -44,7 +44,9 @@ export const Value = styled.td`
     text-align: left;
   }
 `;
-export const Text = styled.div``;
+export const Text = styled.div`
+  padding-left: 15px;
+`;
 export const Button = styled.button`
   display: block;
   margin: 0 auto;
