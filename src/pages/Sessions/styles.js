@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { colors } from "../../globals/styles";
 
 export const Container = styled.div`
-  height: 100%;
+  // height: 100%;
+  height: 300px;
   display: flex;
-  align-items: center;
+  margin-top: 57px;
+  // align-items: center;
   justify-content: center;
 `;
 
@@ -13,3 +15,12 @@ export const Section = styled.div`
   max-width: 900px;
   background-color: ${colors.white};
 `;
+
+export const Header = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 20px;
+`;
+
+export const InputBox = styled.div``;
